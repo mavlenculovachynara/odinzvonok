@@ -118,8 +118,7 @@
 .additional-container {
   background-color: rgba(100, 100, 100, 1); 
   padding: 40px; 
-  margin: 0; 
-  border-radius: 8px;
+  margin: 0;
 }
 
 .additional-heading {
@@ -357,7 +356,6 @@
 .AboutUsFiz-form-container {
   background-color: rgba(135, 135, 135, 1);
   padding: 40px;
-  margin: 20px 0;
   color: white; 
 }
 

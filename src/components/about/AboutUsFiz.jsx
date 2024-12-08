@@ -1,20 +1,60 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Advantages from '../../assets/section right top.png';
 import helpimgright from '../../assets/plumbing.png'
 import blackcontimg from '../../assets/ремонт.png'
 import rekvisitImage from '../../assets/сертификатодинзвонок.png'
 import './AboutUsFiz.css';
+import {useDispatch, useSelector} from "react-redux";
+import {
+  getAdvantages, getAssistance,
+  getIndividualAdvantages,
+  getIndividualEntities,
+  getOurServices,
+  getWorkStages
+} from "../../store/apiSlice";
 
 const AboutUsFiz = () => {
+  const [stages,setStages] = useState([])
+  const [helps,setHelps] = useState([])
+  const selectedLanguage = 'ru'
+  const [servicesOur,setServicesOur] = useState([])
+  const dispatch = useDispatch();
+  const toMassive = (someObject) =>{
+    return Object.keys(someObject)
+        .filter(
+            key =>
+                key.startsWith("field") &&
+                key.includes("_") && // Оставляем только ключи с языковым суффиксом
+                key.endsWith(`_${selectedLanguage}`) // Учитываем только выбранный язык
+        )
+        .sort() // Сортируем для предсказуемого порядка
+        .map(key => someObject[key])
+  }
+  const {individualEntities,workStages,ourServices, individualAdvantages,assistance} = useSelector(state => state.api);
+  useEffect(() => {
+    dispatch(getIndividualEntities())
+    dispatch(getWorkStages())
+    dispatch(getOurServices())
+    // dispatch(getIndividualAdvantages())
+    dispatch(getAssistance())
+  }, [dispatch]);
+  useEffect(() => {
+    setServicesOur(toMassive(ourServices))
+  }, [ourServices]);
+  useEffect(() => {
+    setStages(toMassive(workStages))
+  }, [workStages]);
+  useEffect(() => {
+    setHelps(toMassive(assistance))
+  }, [assistance]);
   return (
     <div>
       {/* Первый контейнер */}
       <div className="advantages-container">
         <div className="content-wrapper">
           <div className="text-container">
-            <h3 className="heading">РЕШАЕМ ЛЮБЫЕ БЫТОВЫЕ ПРОБЛЕМЫ БЫСТРО, КАЧЕСТВЕННО И НАДЕЖНО.</h3>
-            <p className="text">Мы оказываем полный спектр услуг для частных клиентов. Наши мастера помогут решить любые задачи — от устранения аварийных ситуаций до установки новой техники.</p>
-            <p className="subtext">Доступно в любой день, по любому адресу.</p>
+            <h3 className="heading">{individualEntities.title}</h3>
+            <p className="text">{individualEntities.description}</p>
           </div>
           <div className="image-container">
             <img src={Advantages} alt="Advantages" className="image" />
@@ -24,16 +64,13 @@ const AboutUsFiz = () => {
 
       {/* Второй контейнер */}
       <div className="additional-container">
-        <h3 className="additional-heading">Дополнительная информация</h3>
-        <p className="additional-text">ВЛАДЕЛЬЦЕВ КВАРТИР И ЧАСТНЫХ ДОМОВ, КОТОРЫМ НУЖНА ПОМОЩЬ С РЕМОНТОМ.</p>
-        <hr className="divider" />
-        <p className="additional-text">СЕМЕЙ, ЖЕЛАЮЩИХ ОПЕРАТИВНО УСТРАНИТЬ БЫТОВЫЕ НЕПОЛАДКИ.</p>
-        <hr className="divider" />
-        <p className="additional-text">ЛЮДЕЙ, КОТОРЫЕ ЦЕНЯТ КАЧЕСТВО И НАДЕЖНОСТЬ В ВЫПОЛНЕНИИ РАБОТ.</p>
-        <hr className="divider" />
-        <p className="additional-text">КЛИЕНТОВ, КОТОРЫМ ТРЕБУЕТСЯ УСТАНОВКА ИЛИ РЕМОНТ БЫТОВОЙ ТЕХНИКИ.</p>
-        <hr className="divider" />
-        <p className="additional-text">ТЕХ, КТО ИЩЕТ КВАЛИФИЦИРОВАННЫХ СПЕЦИАЛИСТОВ БЕЗ ПЕРЕПЛАТ.</p>
+        <h3 className="additional-heading">{ourServices.title}</h3>
+        {servicesOur.map((service, index) => (
+            <div key={index}>
+              <p className="additional-text">{service}</p>
+              <hr className="divider"/>
+            </div>
+        ))}
       </div>
 
       <div className="black-container">
@@ -58,15 +95,13 @@ const AboutUsFiz = () => {
        <div className="gray-container">
         <div className="gray-content">
           <div className="gray-text">
-            <h3 className="gray-heading">Мы готовы помочь с:</h3>
-            <p className="gray-paragraph">Устранением протечек и заменой сантехники.</p>
-            <hr className="gray-divider" />
-            <p className="gray-paragraph">Ремонтом розеток, выключателей, проводки.</p>
-            <hr className="gray-divider" />
-            <p className="gray-paragraph">Диагностикой и ремонтом бытовой техники (стиральные машины, холодильники, посудомоечные машины).</p>
-            <hr className="gray-divider" />
-            <p className="gray-paragraph">Установкой бытовых приборов (бойлеры, вытяжки, кондиционеры).</p>
-            <hr className="gray-divider" />
+            <h3 className="gray-heading">{assistance.title}</h3>
+            {helps.map((help, index) =>(
+                <div key={index}>
+                  <p className="gray-paragraph">{help}</p>
+                  <hr className="gray-divider"/>
+                </div>
+            ))}
           </div>
           <div className="gray-image">
             <img src={helpimgright} alt="Service Illustration" className="gray-img" />
@@ -78,44 +113,26 @@ const AboutUsFiz = () => {
 
       <div class="helpblack-main-content-container">
   <div class="helpblack-text-section-wrapper">
-    <div class="helpblack-section-heading-title">ЭТАПЫ РАБОТЫ.</div>
-    <div class="helpblack-text-item-container">
-      <p class="helpblack-text-block-content">Оставьте заявку — укажите вашу проблему.</p>
-      <div class="helpblack-text-item-number">01</div>
-      <hr class="helpblack-horizontal-separator-line" />
-    </div>
-    <div class="helpblack-text-item-container">
-      <p class="helpblack-text-block-content">Согласуем стоимость — вы узнаете цену заранее.</p>
-      <div class="helpblack-text-item-number">02</div>
-      <hr class="helpblack-horizontal-separator-line" />
-    </div>
-    <div class="helpblack-text-item-container">
-      <p class="helpblack-text-block-content">Мастер приезжает — и сразу приступает к работе.</p>
-      <div class="helpblack-text-item-number">03</div>
-      <hr class="helpblack-horizontal-separator-line" />
-    </div>
-    <div class="helpblack-text-item-container">
-      <p class="helpblack-text-block-content">Результат с гарантией — выполняем всё на высшем уровне.</p>
-      <div class="helpblack-text-item-number">04</div>
-      <hr class="helpblack-horizontal-separator-line" />
-    </div>
-    <div class="helpblack-text-item-container">
-      <p class="helpblack-text-block-content">Гарантия качества — предоставляем гарантию на выполненные услуги.</p>
-      <div class="helpblack-text-item-number">05</div>
-      <hr class="helpblack-horizontal-separator-line" />
-    </div>
+    <div class="helpblack-section-heading-title">{workStages.title}</div>
+    {stages.map((stage, index) => (
+        <div className="helpblack-text-item-container" key={index}>
+          <p className="helpblack-text-block-content">{stage}</p>
+          <div className="helpblack-text-item-number">0{index+1}</div>
+          <hr className="helpblack-horizontal-separator-line"/>
+        </div>
+    ))}
+
   </div>
 
-  <div class="helpblack-image-section-wrapper">
-    <img src={blackcontimg} alt="Картинка" class="helpblack-image-container" />
-  </div>
-</div>
+        <div class="helpblack-image-section-wrapper">
+          <img src={blackcontimg} alt="Картинка" class="helpblack-image-container"/>
+        </div>
+      </div>
 
 
-
-        {/* Новый контейнер с реквизитами */}
-        <div className="rekvizit-container">
-        <h3 className="rekvizit-heading">Реквизиты</h3>
+      {/* Новый контейнер с реквизитами */}
+      <div className="rekvizit-container">
+      <h3 className="rekvizit-heading">Реквизиты</h3>
 
         <div className="rekvizit-content">
           {/* Картинка слева */}

@@ -12,6 +12,7 @@ import NotFound from './components/NotFound/NotFound';
 import Services from './components/services/Services';
 import ServicesMain from './components/services/ServicesMain';
 import Vakancies from './components/vacancies/Vakancies';
+import MyRoutes from "./routes/MyRoutes";
 
 function App() {
   return (
@@ -23,11 +24,7 @@ function App() {
     {/* <Services/> */}
     {/* <AboutCompany/> */}
     {/* <NotFound/> */}
-    <MainPage/>
-    <AboutUsMain/>
-    <ServicesMain/>
-    <AdvantagesMain/>
-    <Contacts/>
+      <MyRoutes/>
     <Footer/>
     </div>
   );

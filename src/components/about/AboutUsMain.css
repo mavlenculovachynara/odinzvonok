@@ -3,6 +3,7 @@
     align-items: flex-start;
     position: relative;
     padding: 2rem;
+    margin-top: 100px;
   }
   
   .header-text {

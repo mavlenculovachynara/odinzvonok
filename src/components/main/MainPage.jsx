@@ -1,9 +1,16 @@
 // Import React and necessary icons
-import React from 'react';
+import React, {useEffect} from 'react';
 import { FaInstagram, FaWhatsapp, FaTelegramPlane } from 'react-icons/fa';
 import './MainPage.css';
+import {useDispatch, useSelector} from "react-redux";
+import {getHomePage} from "../../store/apiSlice";
 
 const MainPage = () => {
+    const dispatch = useDispatch();
+    const {homePage} = useSelector(state => state.api);
+    useEffect(() => {
+        dispatch(getHomePage())
+    }, [dispatch]);
   return (
     <div className="main-page">
       <div className="vertical-line line1"></div>
@@ -15,11 +22,13 @@ const MainPage = () => {
       <div className="horizontal-line line3"></div>
 
       <div className="center-text top-text">
-        Один Звонок – и ваши проблемы решены!
+        {/*Один Звонок – и ваши проблемы решены!*/}
+          {homePage.title}
       </div>
 
       <div className="center-text bottom-text">
-        Комплексное обслуживание и решение мелких технических проблем для предприятий (швейные цеха, кафе, рестораны и другие организации).
+          {homePage.description}
+        {/*Комплексное обслуживание и решение мелких технических проблем для предприятий (швейные цеха, кафе, рестораны и другие организации).*/}
       </div>
 
       <div className="center-square">

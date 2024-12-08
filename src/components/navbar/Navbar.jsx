@@ -25,13 +25,13 @@ const Navbar = () => {
           <img src={logopng} alt="Логотип" className="logo-image" />
         </div>
         <div className="links">
-          <a href="#home">Главная</a>
-          <a href="#about">О нас</a>
-          <a href="#services">Услуги и Тарифы</a>
+          <Link to="/">Главная</Link>
+          <Link to="/aboutcompany">О нас</Link>
+          <Link to="/services">Услуги и Тарифы</Link>
           <Link to="/aboutusfiz">Физ.Лицам</Link>
-          <a href="#corporate">Юр.Лицам</a>
-          <a href="#careers">Вакансии</a>
-          <a href="#contacts">Контакты</a>
+          <Link to="/aboutusur">Юр.Лицам</Link>
+          <Link to="/vacancies">Вакансии</Link>
+          <Link to="/contacts">Контакты</Link>
           <div className="language-switcher">
             <button onClick={toggleLanguage} className="accordion-button">
               {language}

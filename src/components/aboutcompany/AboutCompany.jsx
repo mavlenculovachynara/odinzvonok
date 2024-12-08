@@ -1,17 +1,25 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import aboutconpimg1 from '../../assets/aboutcomp.png';
 import employeesimg from '../../assets/Rectangle 13.png';
 import './AboutCompany.css';
+import {useDispatch, useSelector} from "react-redux";
+import {getAboutCompany, getClients, getHomeAboutCompany, getTeam} from "../../store/apiSlice";
 
 const AboutCompany = () => {
-  const employees = [
-    { name: 'Иван Иванов', position: 'Дизайнер', img: employeesimg },
-    { name: 'Анна Смирнова', position: 'Разработчик', img: employeesimg },
-    { name: 'Петр Петров', position: 'Менеджер', img: employeesimg },
-    { name: 'Ольга Соколова', position: 'Маркетолог', img: employeesimg },
-    { name: 'Елена Кузнецова', position: 'Аналитик', img: employeesimg },
-  ];
-
+  // const employees = [
+  //   { name: 'Иван Иванов', position: 'Дизайнер', img: employeesimg },
+  //   { name: 'Анна Смирнова', position: 'Разработчик', img: employeesimg },
+  //   { name: 'Петр Петров', position: 'Менеджер', img: employeesimg },
+  //   { name: 'Ольга Соколова', position: 'Маркетолог', img: employeesimg },
+  //   { name: 'Елена Кузнецова', position: 'Аналитик', img: employeesimg },
+  // ];
+  const dispatch = useDispatch();
+  const {aboutCompany, team, clients} = useSelector(state => state.api);
+  useEffect(() => {
+    dispatch(getAboutCompany())
+    dispatch(getTeam())
+    dispatch(getClients())
+  }, [dispatch]);
   return (
     <div className="about-company">
       {/* Первый контейнер */}
@@ -20,10 +28,7 @@ const AboutCompany = () => {
         <div className="text-section">
           <h1>О нашей компании</h1>
           <p>
-          Мы — компания, которая предоставляет услуги по ремонту и обслуживанию бытовых и инженерных систем по ПОДПИСКЕ.
-          </p>
-          <p>
-          Мы работаем с электрикой, сантехникой и ремонтом бытовой техники. Наши клиенты могут рассчитывать на оперативную помощь в решении мелких технических неисправностей, что позволяет минимизировать время простоя и избежать неожиданных затрат на ремонт.
+            {aboutCompany.body}
           </p>
         </div>
 
@@ -41,10 +46,10 @@ const AboutCompany = () => {
         <div className="team-box black-box">
           <p>Наша команда</p>
         </div>
-        {employees.map((employee, index) => (
+        {team.map((employee, index) => (
           <div key={index} className="team-box employee-box">
             <div className="employee-name">{employee.name}</div>
-            <img src={employee.img} alt={employee.name} />
+            <img src={employee.image} alt={employee.name} />
             <div className="employee-position">{employee.position}</div>
           </div>
         ))}
@@ -55,25 +60,17 @@ const AboutCompany = () => {
       <div className="black-container">
         <h3 className="black-heading">КЛИЕНТЫ И ПАРТНЕРЫ</h3>
         <div className="squares-container">
-          <div className="square">
-            <p className="square-text">Beeline</p>
-          </div>
-          <div className="square">
-            <p className="square-text">Beeline</p>
-          </div>
-          <div className="square">
-            <p className="square-text">Beeline</p>
-          </div>
-          <div className="square">
-            <p className="square-text">Beeline</p>
-          </div>
+          {clients.map((client, index) => (
+            <div className="square" key={index}>
+              <p className="square-text">{client.name}</p>
+            </div>
+          ))}
         </div>
       </div>
-  
 
-       
-    <div className="aboutcomp-formcomt">
-    <div className="aboutcomp-wrapper">
+
+      <div className="aboutcomp-formcomt">
+        <div className="aboutcomp-wrapper">
   <h2>Оставить заявку</h2>
 
   <div className="aboutcomp-container">
