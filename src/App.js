@@ -9,6 +9,7 @@ import Footer from './components/footer/Footer';
 import MainPage from './components/main/MainPage';
 import Navbar from './components/navbar/Navbar';
 import NotFound from './components/NotFound/NotFound';
+import Overhaul from './components/overhaul/Overhaul';
 import Services from './components/services/Services';
 import ServicesMain from './components/services/ServicesMain';
 import Vakancies from './components/vacancies/Vakancies';
@@ -20,7 +21,7 @@ function App() {
     {/* <Vakancies/> */}
     {/* <AboutUsUr/> */}
     {/* <AboutUsFiz/> */}
-    {/* <Services/> */}
+    <Services/>
     {/* <AboutCompany/> */}
     {/* <NotFound/> */}
     {/* <MainPage/> */}
@@ -28,6 +29,7 @@ function App() {
     {/* <ServicesMain/> */}
     {/* <AdvantagesMain/> */}
     {/* <Contacts/> */}
+    {/* <Overhaul/> */}
     <Footer/>
     </div>
   );
