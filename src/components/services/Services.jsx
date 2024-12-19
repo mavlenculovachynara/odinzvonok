@@ -226,8 +226,8 @@ const Services = () => {
 
 
       {/* Вертикальные линии */}
-      <div className="vertical-line left"></div>
-      <div className="vertical-line right"></div>
+      <div className="services-vertical-line left"></div>
+      <div className="services-vertical-line right"></div>
     </div>
 
 

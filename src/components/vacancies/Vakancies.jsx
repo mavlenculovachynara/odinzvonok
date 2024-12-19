@@ -31,7 +31,7 @@ const Vakancies = () => {
   <div className="vakancies-vertical-line line3"></div>
 
   <div className="vakancies-horizontal-line line1"></div>
-  <div className="vakancies-horizontal-line line2"></div>
+  <div className="vakancies-horizontal-line line22"></div>
   <div className="vakancies-horizontal-line line3"></div>
 
   <div className="vakancies-top-text">

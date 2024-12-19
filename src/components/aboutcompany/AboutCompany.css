@@ -62,7 +62,7 @@
   }
   
   .team-box {
-    width: 497px; /* Установленный размер */
+    width: 497px; 
     height: 335px;
     background-color: white;
     color: black;
@@ -123,7 +123,6 @@
 
 
 
-  /* Общий стиль для контейнера */
   
 .aboutcomp-formcomt{
     width: 100%;
@@ -185,7 +184,6 @@
     box-sizing: border-box;
   }
   
-  /* Отключение изменения размера текстового поля */
   .aboutcomp-textarea {
     resize: none;
     height: 150px;
@@ -228,4 +226,138 @@
   .aboutcomp-button:hover {
     background-color: rgb(96, 96, 96); 
   }
+
+  @media (max-width: 1025px){
+    .team-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 1px;
+      background-color: rgb(101, 101, 101); 
+    }
+    .team-box {
+      width: 334px; 
+      height: 335px;
+      background-color: white;
+      color: black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: center;
+    }
+    .team-box img {
+      width: 305px; 
+      height: 242px; 
+      object-fit: cover;
+      margin-bottom: 10px;
+      border-radius: 10px;
+    }
+    .black-box {
+      background-color: black;
+      color: white;
+      justify-content: flex-end;
+      text-align: left;
+      padding: 20px;
+      position: relative;
+    }
+    
+    .black-box p {
+      position: absolute;
+      bottom: 45px;
+      left: 40px;
+      font-size: 40px;
+      font-weight: bold;
+    }
+    
+    /* Сотрудники */
+    .employee-box {
+      background-color: rgb(88, 88, 88);
+      padding: 10px;
+    }
+    
+    .employee-name {
+      align-self: flex-start;
+      margin-left: 30px; 
+      margin-bottom: 10px;
+      font-weight: 200;
+      font-size: 22px;
+      color: white;
+    }
+    
+    .employee-position {
+      font-size: 22px;
+      color: white;
+      align-self: flex-start;
+      margin-left: 30px; 
+    }
+  }
+
   
+@media (max-width: 768px) {
+
+  .first-container {
+    flex-direction: column;
+  }
+
+  .image-section {
+    order: 2;
+  }
+
+  .text-section {
+    order: 1;
+    margin-bottom: 20px;
+  }
+
+  .team-container {
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto; 
+  }
+
+  .black-box {
+    background-color: black;
+    color: white;
+    justify-content: flex-end;
+    text-align: left;
+    padding: 150px;
+    position: relative;
+  }
+
+  .team-box {
+    width: 100%; 
+    height: auto; 
+  }
+   
+  .squares-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .square{
+    width: auto;
+  }
+
+  .aboutcomp-container {
+    flex-direction: column;
+  }
+
+  .aboutcomp-wrapper {
+    width: 100%; 
+    margin: 0 auto; 
+    background-color: black; 
+    padding: 2rem;
+    color: white;
+    box-sizing: border-box;
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    min-height: 45vh;
+  }
+
+  .aboutcomp-input, 
+  .aboutcomp-textarea, 
+  .aboutcomp-button {
+    width: 100%;
+  }
+}

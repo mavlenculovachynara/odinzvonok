@@ -23,11 +23,11 @@ function App() {
     {/* <Services/> */}
     {/* <AboutCompany/> */}
     {/* <NotFound/> */}
-    <MainPage/>
-    <AboutUsMain/>
-    <ServicesMain/>
-    <AdvantagesMain/>
-    <Contacts/>
+    {/* <MainPage/> */}
+    {/* <AboutUsMain/> */}
+    {/* <ServicesMain/> */}
+    {/* <AdvantagesMain/> */}
+    {/* <Contacts/> */}
     <Footer/>
     </div>
   );

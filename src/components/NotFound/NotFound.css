@@ -68,4 +68,71 @@
   .action-button:hover {
     background-color: darkgray;
   }
+
+  @media (max-width: 1024px) {
+    .content {
+      max-width: 80%;
+    }
+  
+    h2 {
+      font-size: 1.8rem;
+    }
+  
+    h3 {
+      font-size: 1.4rem;
+    }
+  
+    h5 {
+      font-size: 1rem;
+    }
+  
+    .action-button {
+      width: 50%; 
+    }
+  }
+@media (max-width: 768px) {
+  .notfound-container {
+    height: 100%; 
+    background-size:auto; 
+  }
+
+  .content {
+    padding: 10px;
+    max-width: 90%; 
+    text-align: left;
+  }
+
+  h2 {
+    font-size: 1.5rem; 
+    margin-bottom: 15px;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  h5 {
+    font-size: 0.9rem; 
+    margin: 10px 0;
+  }
+
+  ul {
+    margin: 10px auto; 
+    padding-left: 0; 
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+
+  .action-button {
+    width: 100%; 
+    font-size: 0.9rem; 
+    padding: 8px 15px;
+  }
+}
+
+
+
   

@@ -109,7 +109,55 @@ const AboutUsFiz = () => {
   <div class="helpblack-image-section-wrapper">
     <img src={blackcontimg} alt="Картинка" class="helpblack-image-container" />
   </div>
+</div>  
+
+
+        {/* пдф файлы */}
+        <div class="fiz-document-container">
+  <h3>ПЕРЕЧЕНЬ ДОКУМЕНТОВ ДЛЯ ФИЗИЧЕСКИХ ЛИЦ:</h3>
+  <div class="fiz-document-item">
+    <div class="fiz-document-info">
+      <img src="pdf-icon.png" alt="PDF" class="fiz-pdf-icon" />
+      <p>Копия паспорта</p>
+    </div>
+    <div class="fiz-document-actions">
+      <button class="fiz-btn fiz-download-btn">Скачать</button>
+      <button class="fiz-btn fiz-open-btn">Открыть</button>
+    </div>
+  </div>
+  <div class="fiz-document-item">
+    <div class="fiz-document-info">
+      <img src="pdf-icon.png" alt="PDF" class="fiz-pdf-icon" />
+      <p>Справка с места жительства</p>
+    </div>
+    <div class="fiz-document-actions">
+      <button class="fiz-btn fiz-download-btn">Скачать</button>
+      <button class="fiz-btn fiz-open-btn">Открыть</button>
+    </div>
+  </div>
+  <div class="fiz-document-item">
+    <div class="fiz-document-info">
+      <img src="pdf-icon.png" alt="PDF" class="fiz-pdf-icon" />
+      <p>Копия нотариальной доверенности лица, уполномоченного на заключение договора</p>
+    </div>
+    <div class="fiz-document-actions">
+      <button class="fiz-btn fiz-download-btn">Скачать</button>
+      <button class="fiz-btn fiz-open-btn">Открыть</button>
+    </div>
+  </div>
+  <div class="fiz-document-item">
+    <div class="fiz-document-info">
+      <img src="pdf-icon.png" alt="PDF" class="fiz-pdf-icon" />
+      <p>Копии разрешительной документации</p>
+    </div>
+    <div class="fiz-document-actions">
+      <button class="fiz-btn fiz-download-btn">Скачать</button>
+      <button class="fiz-btn fiz-open-btn">Открыть</button>
+    </div>
+  </div>
 </div>
+
+        {/* пдф файлы */}
 
 
 

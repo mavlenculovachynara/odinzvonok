@@ -8,7 +8,7 @@
   overflow-x: hidden; 
 }
 
-.vertical-line {
+.services-vertical-line {
   position: absolute;
   /* top: 5%; */
   /* bottom: 5%; */
@@ -16,11 +16,11 @@
   background-color: gray;
 }
 
-.vertical-line.left {
+.services-vertical-line.left {
   left: 3.5%;
 }
 
-.vertical-line.right {
+.services-vertical-line.right {
   right: 3.5%;
 }
 

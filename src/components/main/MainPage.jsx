@@ -5,7 +5,8 @@ import './MainPage.css';
 
 const MainPage = () => {
   return (
-    <div className="main-page">
+   <div className="mainPage-container">
+     <div className="main-page">
       <div className="vertical-line line1"></div>
       <div className="vertical-line line2"></div>
       <div className="vertical-line line3"></div>
@@ -23,7 +24,7 @@ const MainPage = () => {
       </div>
 
       <div className="center-square">
-        <h2>Оставить заявку</h2>
+        <h2 className='form-container-h2'>Оставить заявку</h2>
         
         <div className="form-container">
           <div className="form-left">
@@ -54,6 +55,34 @@ const MainPage = () => {
         <FaTelegramPlane className="social-icon" />
       </div>
     </div>
+
+    <div className="center-square-mobile">
+        <h2 className='h2-mobile'>Оставить заявку</h2>
+        
+        <div className="form-container-mobile">
+          <div className="form-left-mobile">
+            <input type="text" className="input-field-mobile" placeholder="Имя*" />
+            <input type="text" className="input-field-mobile" placeholder="Номер телефона*" />
+            <input type="email" className="input-field-mobile" placeholder="Электронная почта*" />
+          </div>
+
+          <div className="form-right-mobile">
+            <textarea className="textarea-field-mobile" rows="4" placeholder="Сообщение*"></textarea>
+          </div>
+        </div>
+        
+        <div className="agreement-mobile">
+          <input type="checkbox" id="privacyPolicy" />
+          <label color='black' htmlFor="privacyPolicy">
+            Я прочитал и согласен с 
+            <a href="#" className="policy-link">политикой конфиденциальности</a>
+          </label>
+        </div>
+
+        <button className="submit-button-mobile">Отправить</button>
+      </div>
+
+   </div>
   );
 };
 

@@ -119,6 +119,137 @@ const AboutUsUr = () => {
 
 
 
+<div class="Ur-document-container">
+  <h3>ПЕРЕЧЕНЬ ДОКУМЕНТОВ ДЛЯ ЮРИДИЧЕСКИХ ЛИЦ:</h3>
+  <div class="Ur-document-item">
+    <div class="Ur-document-info">
+      <img src="pdf-icon.png" alt="PDF" class="Ur-pdf-icon" />
+      <span>Копия свидетельства о регистрации юридического лица</span>
+    </div>
+    <div class="Ur-document-actions">
+      <button class="Ur-btn Ur-download-btn">Скачать</button>
+      <button class="Ur-btn Ur-open-btn">Открыть</button>
+    </div>
+  </div>
+  <div class="Ur-document-item">
+    <div class="Ur-document-info">
+      <img src="pdf-icon.png" alt="PDF" class="Ur-pdf-icon" />
+      <span>Копия устава юридического лица</span>
+    </div>
+    <div class="Ur-document-actions">
+      <button class="Ur-btn Ur-download-btn">Скачать</button>
+      <button class="Ur-btn Ur-open-btn">Открыть</button>
+    </div>
+  </div>
+  <div class="Ur-document-item">
+    <div class="Ur-document-info">
+      <img src="pdf-icon.png" alt="PDF" class="Ur-pdf-icon" />
+      <span>Реквизиты</span>
+    </div>
+    <div class="Ur-document-actions">
+      <button class="Ur-btn Ur-download-btn">Скачать</button>
+      <button class="Ur-btn Ur-open-btn">Открыть</button>
+    </div>
+  </div>
+  <div class="Ur-document-item">
+    <div class="Ur-document-info">
+      <img src="pdf-icon.png" alt="PDF" class="Ur-pdf-icon" />
+      <span>Копия доверенности лица, уполномоченного на заключение договора </span>
+    </div>
+    <div class="Ur-document-actions">
+      <button class="Ur-btn Ur-download-btn">Скачать</button>
+      <button class="Ur-btn Ur-open-btn">Открыть</button>
+    </div>
+  </div>
+  <div class="Ur-document-item">
+    <div class="Ur-document-info">
+      <img src="pdf-icon.png" alt="PDF" class="Ur-pdf-icon" />
+      <span> Документы подтверждающие полномочия руководителя юридического лица </span>
+    </div>
+    <div class="Ur-document-actions">
+      <button class="Ur-btn Ur-download-btn">Скачать</button>
+      <button class="Ur-btn Ur-open-btn">Открыть</button>
+    </div>
+  </div>
+  <div class="Ur-document-item">
+    <div class="Ur-document-info">
+      <img src="pdf-icon.png" alt="PDF" class="Ur-pdf-icon" />
+      <span>Копия свидетельства о постановке на налоговый учет (ИНН)</span>
+    </div>
+    <div class="Ur-document-actions">
+      <button class="Ur-btn Ur-download-btn">Скачать</button>
+      <button class="Ur-btn Ur-open-btn">Открыть</button>
+    </div>
+  </div>
+  <div class="Ur-document-item">
+    <div class="Ur-document-info">
+      <img src="pdf-icon.png" alt="PDF" class="Ur-pdf-icon" />
+      <span>Копии разрешительной документации</span>
+    </div>
+    <div class="Ur-document-actions">
+      <button class="Ur-btn Ur-download-btn">Скачать</button>
+      <button class="Ur-btn Ur-open-btn">Открыть</button>
+    </div>
+  </div>
+</div>
+
+<div class="Ur-document-container">
+  <h3>ПЕРЕЧЕНЬ ДОКУМЕНТОВ ДЛЯ ИНДИВИДУАЛЬНЫХ ПРЕДПРИНИМАТЕЛЕЙ:</h3>
+  <div class="Ur-document-item">
+    <div class="Ur-document-info">
+      <img src="pdf-icon.png" alt="PDF" class="Ur-pdf-icon" />
+      <span>Копия свидетельства о регистрации ИП</span>
+    </div>
+    <div class="Ur-document-actions">
+      <button class="Ur-btn Ur-download-btn">Скачать</button>
+      <button class="Ur-btn Ur-open-btn">Открыть</button>
+    </div>
+  </div>
+  <div class="Ur-document-item">
+    <div class="Ur-document-info">
+      <img src="pdf-icon.png" alt="PDF" class="Ur-pdf-icon" />
+      <span>Копия паспорта ИП</span>
+    </div>
+    <div class="Ur-document-actions">
+      <button class="Ur-btn Ur-download-btn">Скачать</button>
+      <button class="Ur-btn Ur-open-btn">Открыть</button>
+    </div>
+  </div>
+  <div class="Ur-document-item">
+    <div class="Ur-document-info">
+      <img src="pdf-icon.png" alt="PDF" class="Ur-pdf-icon" />
+      <span>Копия свидетельства о постановке на налоговый учет </span>
+    </div>
+    <div class="Ur-document-actions">
+      <button class="Ur-btn Ur-download-btn">Скачать</button>
+      <button class="Ur-btn Ur-open-btn">Открыть</button>
+    </div>
+  </div>
+  <div class="Ur-document-item">
+    <div class="Ur-document-info">
+      <img src="pdf-icon.png" alt="PDF" class="Ur-pdf-icon" />
+      <span>Копия нотариальной доверенности лица, уполномоченного на заключение договора </span>
+    </div>
+    <div class="Ur-document-actions">
+      <button class="Ur-btn Ur-download-btn">Скачать</button>
+      <button class="Ur-btn Ur-open-btn">Открыть</button>
+    </div>
+  </div>
+  <div class="Ur-document-item">
+    <div class="Ur-document-info">
+      <img src="pdf-icon.png" alt="PDF" class="Ur-pdf-icon" />
+      <span>Копии разрешительной документации</span>
+    </div>
+    <div class="Ur-document-actions">
+      <button class="Ur-btn Ur-download-btn">Скачать</button>
+      <button class="Ur-btn Ur-open-btn">Открыть</button>
+    </div>
+  </div>
+</div>
+
+
+
+
       {/* Новый контейнер с реквизитами */}
       <div className="rekvizit-container-ur">
       <h3 className="rekvizit-heading-ur">Реквизиты</h3>
