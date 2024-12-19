@@ -1,42 +1,197 @@
 import React from 'react';
-import './Services'; // Подключаем CSS файл
+import { FaInstagram, FaWhatsapp, FaTelegram } from 'react-icons/fa';
+import servicesimg from '../../assets/Designer (33) 1.png';
+import privatehouses from '../../assets/частныедома.png';
+import bisinessimg from '../../assets/бизнес.png';
+import additionalimg from '../../assets/допуслуги.png'
+import './Services.css';
 
 const Services = () => {
   return (
-    <div className="container">
-    <div className="black-container">
-      <div className="header">ТАРИФ</div>
-      {['', '', ''].map((_, index) => (
-        <div key={index} className="tarif-item">
-          <div className="left-section">
-            <div>САНТЕХНИКА</div>
-            <div>☑️</div>
+            <div className="ServicesCont">
+
+              {/* //! КВАРТИРЫ  */}
+
+       <div className="services-container">
+      {/* 1.1 секция */}
+      <div className="section-middle">
+        <h1 className="services-title">ОКАЗЫВАЕМ СЛЕДУЮЩИЕ УСЛУГИ</h1>
+
+        <div className="gray-container">
+          <img src={servicesimg} alt="Service" className="service-image" />
+          <div className="center-text">
+            <hr className="divider" />
+            <p>Надёжные мастера для вашего дома: сантехника, электрика и ремонт бытовой техники. Выполним работы быстро и качественно, чтобы ваш дом всегда оставался комфортным и безопасным.</p>
           </div>
-          <div className="line"></div>
+          <div className="right-text">
+            <hr className="divider" />
+            <p>От мелкого ремонта до комплексных услуг: мы решим любые бытовые задачи по сантехнике, электрике и ремонту техники. Оставьте заявку, и наши специалисты свяжутся с вами для уточнения всех деталей.</p>
+          </div>
         </div>
-      ))}
+          
+         
+
+      </div>
+
+      {/* Контейнер для иконок соц сетей */}
+      <div className="social-icons-container">
+        <FaInstagram className="icon" />
+        <FaWhatsapp className="icon" />
+        <FaTelegram className="icon" />
+      </div>
+
+      {/* Вертикальные линии */}
+      <div className="services-vertical-line left"></div>
+      <div className="services-vertical-line right"></div>
     </div>
 
-    <div className="black-container">
-      <div className="header">ТАРИФ</div>
-      {['', '', ''].map((_, index) => (
-        <div key={index} className="tarif-item">
-          <div className="left-section">
-            <div>САНТЕХНИКА</div>
-            <div>☑️</div>
+
+       {/* //! ЧАСТНЫЕ ДОМА  */}
+      
+
+    <div className="services-container">
+      
+      {/* 1.1 секция */}
+      <div className="section-middle">
+          
+          {/* 1.2 секция  */}
+        <div className="services-section">
+          <h2>ЧАСТНЫЕ ДОМА </h2>
+         <hr />
+
+         <div className="white-container">
+          <img src={privatehouses} alt="Service" className="service-image" />
+          <div className="center-text">
+            <hr className="divider-white" />
+            <p>Надёжные мастера для вашего дома: сантехника, электрика и ремонт бытовой техники. Выполним работы быстро и качественно, чтобы ваш дом всегда оставался комфортным и безопасным.</p>
           </div>
-          <div className="line"></div>
+          <div className="right-text">
+            <hr className="divider-white" />
+            <p>От мелкого ремонта до комплексных услуг: мы решим любые бытовые задачи по сантехнике, электрике и ремонту техники. Оставьте заявку, и наши специалисты свяжутся с вами для уточнения всех деталей.</p>
+          </div>
         </div>
-      ))}
+
+  <hr className="horizontal-divider" />
+</div>
+
+      </div>
+
+
+
+      {/* Вертикальные линии */}
+      <div className="services-vertical-line left"></div>
+      <div className="services-vertical-line right"></div>
     </div>
 
-    <ul className="list">
-      <li>Спичка 1</li>
-      <li>Спичка 2</li>
-      <li>Спичка 3</li>
-    </ul>
-    <div className="cost">СТОИМОСТЬ ТАРИФА 600 сом в месяц</div>
+
+        
+       {/* //! БИЗНЕС */}
+
+    <div className="services-container">
+      
+      {/* 1.1 секция */}
+      <div className="section-middle">
+       
+          
+          {/* 1.2 секция  */}
+        <div className="services-section">
+          <h2>БИЗНЕС</h2>
+         <hr />
+
+         <div className="bisiness-container">
+          <img src={bisinessimg} alt="Service" className="service-image" />
+          <div className="center-text">
+            <hr className="divider" />
+            <p>Надёжные мастера для вашего дома: сантехника, электрика и ремонт бытовой техники. Выполним работы быстро и качественно, чтобы ваш дом всегда оставался комфортным и безопасным.</p>
+          </div>
+          <div className="right-text">
+            <hr className="divider" />
+            <p>От мелкого ремонта до комплексных услуг: мы решим любые бытовые задачи по сантехнике, электрике и ремонту техники. Оставьте заявку, и наши специалисты свяжутся с вами для уточнения всех деталей.</p>
+          </div>
+        </div>
+
+  <hr className="horizontal-divider" />
+</div>
+
+      </div>
+
+      {/* Вертикальные линии */}
+      <div className="services-vertical-line left"></div>
+      <div className="services-vertical-line right"></div>
+    </div>
+
+
+
+        {/* //! ДОП.УСЛУГИ */}
+
+
+    <div className="services-container">
+      
+      {/* 1.1 секция */}
+      <div className="section-middle">
+          
+          {/* 1.2 секция  */}
+        <div className="services-section">
+          <h2> ДОП.УСЛУГИ</h2>
+         <hr />
+
+         <div className="white-container">
+          <img src={additionalimg} alt="Service" className="service-image" />
+          <div className="center-text">
+            <hr className="divider-white" />
+            <p>Надёжные мастера для вашего дома: сантехника, электрика и ремонт бытовой техники. Выполним работы быстро и качественно, чтобы ваш дом всегда оставался комфортным и безопасным.</p>
+          </div>
+          <div className="right-text">
+            <hr className="divider-white" />
+            <p>От мелкого ремонта до комплексных услуг: мы решим любые бытовые задачи по сантехнике, электрике и ремонту техники. Оставьте заявку, и наши специалисты свяжутся с вами для уточнения всех деталей.</p>
+          </div>
+        </div>
+
+  <hr className="horizontal-divider" />
+</div>
+
+      </div>
+
+      {/* Вертикальные линии */}
+      <div className="services-vertical-line left"></div>
+      <div className="services-vertical-line right"></div>
+    </div>
+
+    
+     {/*//! форма зявки */}
+     <div className="serviceform-formcomt">
+    <div className="serviceform-wrapper">
+  <h2>Оставить заявку</h2>
+
+  <div className="serviceform-container">
+    {/* Левая колонка с полями ввода */}
+    <div className="serviceform-left">
+      <input type="text" className="serviceform-input" placeholder="Имя*" />
+      <input type="text" className="serviceform-input" placeholder="Номер телефона*" />
+      <input type="email" className="serviceform-input" placeholder="Электронная почта*" />
+    </div>
+
+    {/* Правая колонка с полем сообщения */}
+    <div className="serviceform-right">
+      <textarea className="serviceform-textarea" rows="4" placeholder="Сообщение*"></textarea>
+    </div>
   </div>
+
+  <div className="serviceform-agreement">
+    <input type="checkbox" id="aboutcompPrivacyPolicy" />
+    <label htmlFor="aboutcompPrivacyPolicy">
+      Я прочитал и согласен с 
+      <a href="#" className="serviceform-policy-link">политикой конфиденциальности</a>
+    </label>
+  </div>
+
+  <button className="serviceform-button">Отправить</button>
+</div>
+
+    </div>
+
+
+            </div>
   );
 };
 
